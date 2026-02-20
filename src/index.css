@@ -1,0 +1,364 @@
+/* =========================
+   BASE STYLES
+========================= */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #d6faa4;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  color: #292828;
+}
+
+html, body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* =========================
+   HEADER
+========================= */
+header {
+  background-color: #FFFAE6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.header-logo img {
+  height: 180px;
+  animation: grow 2s ease;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+.navbar ul {
+  list-style-type: none;
+  background-color: #2e7d32;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.navbar li {
+  flex: 1;
+  text-align: center;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  padding: 18px 0;
+  display: block;
+  font-weight: bold;
+  font-size: 1.1em;
+  border: 1px solid #1b5e20;
+  border-left: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#one {
+  border-left: 1px solid #1b5e20;
+}
+
+.navbar a:hover {
+  background-color: #1b5e20;
+  transform: scale(1.05);
+}
+
+/* =========================
+   MAIN CONTENT
+========================= */
+main {
+  flex: 1;
+  margin: 30px 40px;
+  background-color: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1);
+  color: #2f2f2f;
+  line-height: 1.6;
+}
+
+.head {
+  font-size: 1.6rem;
+  color: rgb(0, 162, 255);
+}
+
+.intro {
+  font-size: 18px;
+}
+
+/* =========================
+   PRODUCTS GRID (NEW)
+========================= */
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 35px;
+  margin-top: 30px;
+}
+
+/* Individual Product Card */
+.product-card-grid {
+  background-color: #ffffff;
+  border-radius: 14px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card-grid:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 26px rgba(0, 0, 0, 0.22);
+}
+
+/* Product Image */
+.product-img-grid {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 12px;
+}
+
+/* Product Title */
+.product-title-grid {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #2e7d32;
+  margin: 10px 0;
+}
+
+/* Product Description */
+.product-desc-grid {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+#shop {
+  background-color: rgb(9, 143, 201);
+  color: white;
+  padding: 6px 14px;
+  font-size: 1.05em;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+#shop:hover {
+  transform: scale(1.08);
+  box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* =========================
+   FOOTER
+========================= */
+.footer {
+  background-color: #553421;
+  color: white;
+  text-align: center;
+  padding: 20px 10px;
+  margin-top: 40px;
+  border-top: 4px solid #462517;
+}
+
+.footer-links {
+  margin-top: 10px;
+}
+
+.footer-links a {
+  color: #bff2ca;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: white;
+}
+
+.footer-content {
+  margin-top: 10px;
+}
+
+/* Social Icons */
+.social-icons {
+  margin-top: 15px;
+}
+
+.social-icons a {
+  margin: 0 10px;
+  color: #bff2ca;
+  font-size: 22px;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #ffd700;
+  transform: scale(1.15);
+}
+
+/* =========================
+   ANIMATIONS
+========================= */
+@keyframes grow {
+  25% {
+    transform: scale(1.05);
+  }
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+  main {
+    margin: 20px;
+  }
+
+  .header-logo img {
+    height: 140px;
+  }
+}
+
+/* =========================
+   CONTACT FORM STYLING
+========================= */
+
+.contact-box {
+  margin-top: 10px;          /* reduced */
+  padding: 18px;             /* reduced */
+  background-color: #e7f5b1;
+  border-radius: 6px;       /* slightly tighter */
+  box-shadow: 0 5px 14px rgba(0, 0, 0, 0.12);
+  max-width: 380px;          /* slightly smaller */
+  width: 100%;
+  margin-left: 150px;
+  justify-self: start;
+}
+
+.contact-box p {
+  font-size: 1rem;           /* slightly smaller */
+  font-weight: 600;
+  margin-bottom: 10px;       /* reduced */
+  color: #2e7d32;
+}
+
+/* Form container */
+.contact-inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;                 /* reduced gap */
+}
+
+/* Inputs & textarea */
+.contact-inputs input,
+.contact-inputs textarea {
+  width: 100%;
+  padding: 10px 12px;        /* reduced padding */
+  font-size: 0.95rem;
+  border-radius: 7px;
+  border: 1px solid #ccc;
+  outline: none;
+  font-family: 'Poppins', sans-serif;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* Textarea height */
+.contact-inputs textarea {
+  min-height: 100px;         /* reduced */
+  resize: vertical;
+}
+
+/* Focus effect */
+.contact-inputs input:focus,
+.contact-inputs textarea:focus {
+  border-color: #2e7d32;
+  box-shadow: 0 0 0 2px rgba(46, 125, 50, 0.18);
+}
+
+/* Submit button */
+.contact-inputs button {
+  margin-top: 8px;           /* reduced */
+  align-self: flex-start;
+  background-color: #2e7d32;
+  color: white;
+  padding: 8px 18px;         /* tighter button */
+  font-size: 0.95rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 7px;
+  cursor: pointer;
+  transition: background-color 0.25s ease,
+              transform 0.2s ease,
+              box-shadow 0.2s ease;
+}
+
+/* Button hover */
+.contact-inputs button:hover {
+  background-color: #1b5e20;
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.18);
+}
+
+/* =========================
+   CONTACT PAGE LAYOUT
+========================= */
+
+.contact-layout {
+  
+  display: grid;
+  grid-template-columns: 1.3fr 1fr; /* better balance */
+  gap: 16px;                        /* reduced gap */
+  margin-top: 20px;                 /* reduced */
+  align-items: start;
+}
+
+/* Left text block */
+.contact-info {
+    
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+  .contact-layout {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .contact-box {
+    max-width: 100%;
+    justify-self: stretch;
+  }
+}
+
+@media (max-width: 600px) {
+  .contact-box {
+    padding: 16px;
+  }
+
+  .contact-inputs button {
+    width: 100%;
+    text-align: center;
+  }
+}
+
